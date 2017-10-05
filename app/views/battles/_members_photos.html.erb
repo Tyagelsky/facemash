@@ -1,0 +1,17 @@
+<h1 align="center">Who's better?</h1>
+<div class="photos">
+  <%= hidden_field_tag :winner_id, @photo1.id %>
+  <%= hidden_field_tag :looser_id, @photo2.id %>
+  <h3><%= @photo1.user.name %></h3>
+  <%= link_to do  %>
+    <section><%= image_tag @photo1.source_url(:thumb) %></section>
+  <% end %>
+</div>
+<div class="photos">
+  <%= hidden_field_tag :winner_id, @photo2.id %>
+  <%= hidden_field_tag :looser_id, @photo1.id %>
+  <h3><%= @photo2.user.name %></h3>
+  <%= link_to do  %>
+    <section><%= image_tag @photo2.source_url(:thumb) %></section>
+  <% end %>
+</div>
